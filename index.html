@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Serene Vibes Kashmir — A Poem In Motion. Licensed Kashmir tour operator offering curated itineraries to Pahalgam, Gulmarg, Srinagar, Sonamarg, and Doodhpathri.">
+  <title>Serene Vibes Kashmir | A Poem In Motion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- PWA: manifest + theme color -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0a1f2b">
+
+  <!-- PWA: iOS support (Apple doesn't read manifest.json for these) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Serene Vibes">
+
+  <!-- PWA: icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="tel:+9194190766510" class="top-bar-link">+9194190766510</a>
+      <a href="mailto:serenevibeskashmir@gmail.com" class="top-bar-link">serenevibeskashmir@gmail.com</a>
+      <span class="top-bar-badge">Registered J&amp;K Tour Operator</span>
+      <a href="/admin" class="top-bar-link top-bar-admin">Admin Login</a>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <svg class="logo-mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M4 24L12 12L18 18L28 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 26H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-name">Serene Vibes Kashmir</span>
+          <span class="logo-tagline">A Poem In Motion</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+
+      <svg class="hero-route-line" viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,110 L150,80 L300,95 L420,40 L560,65 L700,20 L850,55 L980,30 L1120,70 L1200,50"
+              fill="none" stroke="#c98a4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+        <circle cx="150" cy="80" r="3.5" fill="#f6f1e7"/>
+        <circle cx="420" cy="40" r="3.5" fill="#f6f1e7"/>
+        <circle cx="700" cy="20" r="3.5" fill="#f6f1e7"/>
+        <circle cx="980" cy="30" r="3.5" fill="#f6f1e7"/>
+      </svg>
+
+      <div class="hero-content container">
+        <p class="hero-tag">A Poem In Motion · Est. 2009</p>
+        <h1>Serene Vibes Kashmir</h1>
+        <p class="hero-sub">Licensed Kashmir tour operator delivering thoughtfully planned itineraries across the valley — Srinagar's Mughal gardens, Gulmarg's alpine meadows, Pahalgam's pine forests, and beyond — with local guides, verified stays, and transparent pricing.</p>
+        <div class="hero-actions">
+          <a href="#packages" class="btn btn-primary">View Packages</a>
+          <a href="tel:+9194190766510" class="btn btn-outline">Call +9194190766510</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Years of Service</span></div>
+          <div class="stat"><span class="stat-num">5</span><span class="stat-label">Curated Destinations</span></div>
+          <div class="stat"><span class="stat-num">5,000+</span><span class="stat-label">Guests Served</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-strip">
+      <div class="container">
+        <form class="quote-card" id="searchForm">
+          <div class="quote-card-head">
+            <h2>Get a Same-Day Quote</h2>
+            <p>Pick a destination or tell us your dates — our team replies within 24 hours.</p>
+          </div>
+
+          <div class="quote-picks" role="group" aria-label="Quick destination picks">
+            <button type="button" class="quote-pick active" data-dest="">Any Destination</button>
+            <button type="button" class="quote-pick" data-dest="pahalgam">Pahalgam</button>
+            <button type="button" class="quote-pick" data-dest="gulmarg">Gulmarg</button>
+            <button type="button" class="quote-pick" data-dest="srinagar">Srinagar</button>
+          </div>
+
+          <div class="quote-fields">
+            <div class="search-field">
+              <label for="destination">Destination</label>
+              <select id="destination" name="destination">
+                <option value="">Select destination</option>
+                <option value="pahalgam">Pahalgam</option>
+                <option value="gulmarg">Gulmarg</option>
+                <option value="srinagar">Srinagar</option>
+                <option value="sonamarg">Sonamarg</option>
+                <option value="doodhpathri">Doodhpathri</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label for="dates">Travel Date</label>
+              <input type="date" id="dates" name="dates">
+            </div>
+            <div class="search-field">
+              <label for="travelers">Guests</label>
+              <select id="travelers" name="travelers">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5+">5+ Guests</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary search-btn">Check Availability</button>
+          </div>
+          <p class="form-note" id="searchNote"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="trust-bar">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-label">Licensed Operator</span><span class="trust-desc">J&amp;K Tourism registered</span></div>
+        <div class="trust-item"><span class="trust-label">Local Expertise</span><span class="trust-desc">Certified valley guides</span></div>
+        <div class="trust-item"><span class="trust-label">Verified Stays</span><span class="trust-desc">Handpicked hotels &amp; houseboats</span></div>
+        <div class="trust-item"><span class="trust-label">Dedicated Support</span><span class="trust-desc">24/7 on-trip assistance</span></div>
+      </div>
+    </section>
+
+    <section class="section destinations" id="destinations">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Destinations</span>
+          <h2>Kashmir Valley Highlights</h2>
+          <p>Five signature destinations, each selected for natural beauty, cultural significance, and reliable access throughout the season.</p>
+        </div>
+
+        <!-- Signature device: the actual route order & elevation, not decoration -->
+        <div class="route-strip">
+          <div class="route-track">
+            <div class="route-stop"><span class="elev">1,585 m</span><div class="dot"></div><span class="name">Srinagar</span><div class="dist">Base &amp; airport hub</div></div>
+            <div class="route-stop"><span class="elev">2,690 m</span><div class="dot"></div><span class="name">Gulmarg</span><div class="dist">52 km from Srinagar</div></div>
+            <div class="route-stop"><span class="elev">2,130 m</span><div class="dot"></div><span class="name">Pahalgam</span><div class="dist">90 km from Srinagar</div></div>
+            <div class="route-stop"><span class="elev">2,800 m</span><div class="dot"></div><span class="name">Sonamarg</span><div class="dist">80 km from Srinagar</div></div>
+            <div class="route-stop"><span class="elev">2,610 m</span><div class="dot"></div><span class="name">Doodhpathri</span><div class="dist">42 km from Srinagar</div></div>
+          </div>
+        </div>
+
+        <div class="destinations-grid">
+          <article class="destination-card destination-card--large" data-destination="Srinagar">
+            <img src="https://images.unsplash.com/photo-1595815779282-9455131a3a8a?w=800&q=80" alt="Dal Lake, Srinagar" loading="lazy">
+            <div class="destination-info">
+              <span class="destination-elev">1,585 m · Summer Capital</span>
+              <h3>Srinagar</h3>
+              <p>Drift by shikara across Dal Lake at sunset, wander the Mughal-era terraces of Nishat and Shalimar Bagh, and watch the valley unfold from Shankaracharya hill.</p>
+              <ul class="destination-spots">
+                <li>Shalimar Bagh</li>
+                <li>Nishat Bagh</li>
+                <li>Shankaracharya Temple</li>
+                <li>Dal Lake &amp; Houseboats</li>
+              </ul>
+            </div>
+          </article>
+          <article class="destination-card" data-destination="Pahalgam">
+            <img src="https://images.unsplash.com/photo-1587471384974-b47855f0e68f?w=600&q=80" alt="Pahalgam valley" loading="lazy">
+            <div class="destination-info">
+              <span class="destination-elev">2,130 m</span>
+              <span class="destination-region">Valley of Shepherds</span>
+              <h3>Pahalgam</h3>
+              <p>Lidder Valley · Betaab Valley · Aru</p>
+            </div>
+          </article>
+          <article class="destination-card" data-destination="Gulmarg">
+            <img src="https://images.unsplash.com/photo-1551524164-6cf77f71e111?w=600&q=80" alt="Gulmarg meadows" loading="lazy">
+            <div class="destination-info">
+              <span class="destination-elev">2,690 m</span>
+              <span class="destination-region">Meadow of Flowers</span>
+              <h3>Gulmarg</h3>
+              <p>Gondola Cable Car · Khilanmarg · Apharwat Peak</p>
+            </div>
+          </article>
+          <article class="destination-card" data-destination="Sonamarg">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Sonamarg mountains" loading="lazy">
+            <div class="destination-info">
+              <span class="destination-elev">2,800 m</span>
+              <span class="destination-region">Meadow of Gold</span>
+              <h3>Sonamarg</h3>
+              <p>Thajiwas Glacier · Sindh River</p>
+            </div>
+          </article>
+          <article class="destination-card" data-destination="Doodhpathri">
+            <img src="https://images.unsplash.com/photo-1501785888041-0018539036c9?w=600&q=80" alt="Doodhpathri meadows" loading="lazy">
+            <div class="destination-info">
+              <span class="destination-elev">2,610 m</span>
+              <span class="destination-region">Valley of Milk</span>
+              <h3>Doodhpathri</h3>
+              <p>Shaliganga River · Pine Forests</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section packages" id="packages">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Tour Packages</span>
+          <h2>Structured Itineraries</h2>
+          <p>Fixed-departure and custom packages including accommodation, transfers, permits, and guided sightseeing — with no hidden charges.</p>
+        </div>
+        <div class="packages-grid">
+          <article class="package-card">
+            <div class="package-meta"><span class="package-duration">5 Nights / 6 Days</span><span class="package-badge">Essential</span></div>
+            <h3>Valley Discovery</h3>
+            <p class="package-desc">Srinagar, Gulmarg, and Pahalgam — an ideal introduction to Kashmir for first-time visitors.</p>
+            <ul class="package-features">
+              <li>Deluxe hotel &amp; houseboat stay</li>
+              <li>Private airport transfers</li>
+              <li>Shikara ride on Dal Lake</li>
+              <li>Gulmarg Gondola (Phase 1)</li>
+            </ul>
+            <div class="package-footer">
+              <span class="package-price">From <strong>₹24,999</strong> <span class="package-per">/ person</span></span>
+              <a href="#contact" class="btn btn-secondary" data-package="Valley Discovery">Enquire</a>
+            </div>
+          </article>
+          <article class="package-card package-card--featured">
+            <div class="package-meta"><span class="package-duration">7 Nights / 8 Days</span><span class="package-badge">Recommended</span></div>
+            <h3>Grand Kashmir Circuit</h3>
+            <p class="package-desc">Complete valley experience covering all five destinations with dedicated local guides at each stop.</p>
+            <ul class="package-features">
+              <li>All five destinations included</li>
+              <li>Mughal garden &amp; temple tours</li>
+              <li>Breakfast &amp; dinner daily</li>
+              <li>Permits &amp; entry fees covered</li>
+            </ul>
+            <div class="package-footer">
+              <span class="package-price">From <strong>₹38,999</strong> <span class="package-per">/ person</span></span>
+              <a href="#contact" class="btn btn-primary" data-package="Grand Kashmir Circuit">Enquire</a>
+            </div>
+          </article>
+          <article class="package-card">
+            <div class="package-meta"><span class="package-duration">Custom Duration</span><span class="package-badge">Premium</span></div>
+            <h3>Heritage &amp; Houseboat</h3>
+            <p class="package-desc">Premium Srinagar experience with luxury houseboat accommodation and private curated excursions.</p>
+            <ul class="package-features">
+              <li>Premium houseboat suite</li>
+              <li>Private chauffeur &amp; guide</li>
+              <li>Heritage walk &amp; craft tours</li>
+              <li>Personal trip coordinator</li>
+            </ul>
+            <div class="package-footer">
+              <span class="package-price">From <strong>₹64,999</strong> <span class="package-per">/ person</span></span>
+              <a href="#contact" class="btn btn-secondary" data-package="Heritage & Houseboat">Enquire</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-images">
+          <img src="https://s7ap1.scene7.com/is/image/incredibleindia/dal-lake-srinagar-jammu-&-kashmir-2-attr-hero?qlt=82&ts=1726816668703" alt="Dal Lake, Srinagar" class="about-img-main" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1587471384974-b47855f0e68f?w=400&q=80" alt="Kashmir valley landscape" class="about-img-accent" loading="lazy">
+        </div>
+        <div class="about-content">
+          <span class="eyebrow">About Us</span>
+          <h2>Kashmir Specialists Since 2009</h2>
+          <p>Serene Vibes Kashmir is a Srinagar-based tour operator focused exclusively on the valley. We combine local knowledge with professional trip management to deliver reliable, well-organized travel experiences.</p>
+          <ul class="about-list">
+            <li><span class="about-list-icon">01</span><div><strong>Local Operations Team</strong><p>Ground staff and guides based in Srinagar, available throughout your journey.</p></div></li>
+            <li><span class="about-list-icon">02</span><div><strong>Transparent Pricing</strong><p>Detailed quotations with inclusions, exclusions, and taxes clearly listed upfront.</p></div></li>
+            <li><span class="about-list-icon">03</span><div><strong>Responsible Tourism</strong><p>Partnerships with local communities and environmentally conscious accommodation providers.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section season-strip">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" style="color: var(--saffron-pale);">When To Go</span>
+          <h2 style="color: var(--paper);">Kashmir Through the Seasons</h2>
+          <p style="color: rgba(246,241,231,0.78);">Each season changes what the valley has to offer — plan around what you want to see.</p>
+        </div>
+        <div class="season-grid">
+          <div class="season-card">
+            <p class="season-months">Mar – May</p>
+            <h3>Spring Bloom</h3>
+            <p>Tulip gardens open in Srinagar, orchards blossom across the valley, and Doodhpathri's meadows turn green.</p>
+          </div>
+          <div class="season-card">
+            <p class="season-months">Jun – Aug</p>
+            <h3>Summer Greens</h3>
+            <p>Peak season for Gulmarg's meadows, Pahalgam's riverside walks, and family sightseeing across all five stops.</p>
+          </div>
+          <div class="season-card">
+            <p class="season-months">Sep – Nov</p>
+            <h3>Autumn Gold</h3>
+            <p>Chinar trees turn amber across Srinagar's gardens — fewer crowds, crisp air, dramatic valley light.</p>
+          </div>
+          <div class="season-card">
+            <p class="season-months">Dec – Feb</p>
+            <h3>Winter Snow</h3>
+            <p>Gulmarg becomes a skiing destination with snow-laden slopes; Srinagar's lakes take on a quieter, frozen calm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Guest Reviews</span>
+          <h2>What Our Travelers Say</h2>
+        </div>
+        <div class="testimonials-slider">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <blockquote class="testimonial">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"The Grand Kashmir Circuit was impeccably organized. Transfers were punctual, hotels were as described, and our guide in Gulmarg was exceptional."</p>
+              <footer><div class="testimonial-avatar">AK</div><div><cite>Arjun Kapoor</cite><span>Grand Kashmir Circuit · March 2026</span></div></footer>
+            </blockquote>
+            <blockquote class="testimonial">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"We booked the houseboat package for our anniversary. The Srinagar itinerary covering Shalimar, Nishat, and Dal Lake was thoughtfully planned and stress-free."</p>
+              <footer><div class="testimonial-avatar">PS</div><div><cite>Priya Sharma</cite><span>Heritage &amp; Houseboat · February 2026</span></div></footer>
+            </blockquote>
+            <blockquote class="testimonial">
+              <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"Traveled with elderly parents to Pahalgam and Sonamarg. The team adjusted pacing and vehicle arrangements without us having to ask. Highly professional service."</p>
+              <footer><div class="testimonial-avatar">RM</div><div><cite>Rahul Mehta</cite><span>Valley Discovery · January 2026</span></div></footer>
+            </blockquote>
+          </div>
+          <div class="testimonials-controls">
+            <button class="slider-btn" id="prevBtn" aria-label="Previous review"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn" id="nextBtn" aria-label="Next review"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section social-strip">
+      <div class="container">
+        <div class="social-header">
+          <div>
+            <span class="eyebrow">Follow The Journey</span>
+            <h2 style="margin-top:0.4rem;">From the Valley, In Real Time</h2>
+          </div>
+          <a href="https://instagram.com/serenevibeskashmir" target="_blank" rel="noopener" class="social-handle">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+            @serenevibeskashmir
+          </a>
+        </div>
+        <div class="social-grid">
+          <a class="social-tile" href="https://instagram.com/serenevibeskashmir" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1595815779282-9455131a3a8a?w=400&q=80" alt="Dal Lake shikara at sunset" loading="lazy">
+            <div class="social-tile-overlay">♥ View Post</div>
+          </a>
+          <a class="social-tile" href="https://instagram.com/serenevibeskashmir" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1551524164-6cf77f71e111?w=400&q=80" alt="Gulmarg meadows" loading="lazy">
+            <div class="social-tile-overlay">♥ View Post</div>
+          </a>
+          <a class="social-tile" href="https://instagram.com/serenevibeskashmir" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1587471384974-b47855f0e68f?w=400&q=80" alt="Pahalgam pine valley" loading="lazy">
+            <div class="social-tile-overlay">♥ View Post</div>
+          </a>
+          <a class="social-tile" href="https://instagram.com/serenevibeskashmir" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Sonamarg glacier" loading="lazy">
+            <div class="social-tile-overlay">♥ View Post</div>
+          </a>
+          <a class="social-tile" href="https://instagram.com/serenevibeskashmir" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1501785888041-0018539036c9?w=400&q=80" alt="Doodhpathri meadow stream" loading="lazy">
+            <div class="social-tile-overlay">♥ View Post</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="eyebrow">Contact</span>
+          <h2>Request a Custom Itinerary</h2>
+          <p>Submit your enquiry and a travel consultant will contact you within one business day with package options and a detailed quotation.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 10.833a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" stroke="currentColor" stroke-width="1.5"/><path d="M10 18.333s6.667-4.167 6.667-10A6.667 6.667 0 103.333 8.333c0 5.834 6.667 10 6.667 10z" stroke="currentColor" stroke-width="1.5"/></svg></span>
+              <div><strong>Office</strong><p>NH-44, Lethpora Awantipora<br>Jammu &amp; Kashmir 192122</p></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3.333 4.167c0-.92.746-1.667 1.667-1.667h10c.92 0 1.667.746 1.667 1.667v11.666c0 .92-.746 1.667-1.667 1.667H5c-.92 0-1.667-.746-1.667-1.667V4.167z" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 8.333h5M7.5 11.667h3.333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              <div><strong>Phone</strong><p><a href="tel:+9194190766510">+9194190766510</a><br>Mon–Sat, 9:00 AM – 7:00 PM IST</p></div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3.333 5.833l6.667 5 6.667-5M3.333 15h13.334V5.833H3.333V15z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+              <div><strong>Email</strong><p><a href="mailto:serenevibeskashmir@gmail.com">serenevibeskashmir@gmail.com</a></p></div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3 class="contact-form-title">Enquiry Form</h3>
+          <div class="form-row">
+            <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" required autocomplete="given-name"></div>
+            <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" required autocomplete="family-name"></div>
+          </div>
+          <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" required autocomplete="email"></div>
+          <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="+91" autocomplete="tel"></div>
+          <div class="form-group">
+            <label for="tripInterest">Package Interest</label>
+            <select id="tripInterest" name="tripInterest" required>
+              <option value="">Select a package</option>
+              <option value="valley">Valley Discovery</option>
+              <option value="circuit">Grand Kashmir Circuit</option>
+              <option value="heritage">Heritage &amp; Houseboat</option>
+              <option value="custom">Custom Itinerary</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="message">Trip Requirements</label><textarea id="message" name="message" rows="4" placeholder="Preferred dates, number of guests, destinations, and any special requirements"></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Enquiry</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section policies-section section-alt" id="policies">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Policies</span>
+          <h2>Booking, Payment &amp; Cancellation Terms</h2>
+          <p>The same terms issued with every client itinerary — laid out here for reference before you book.</p>
+        </div>
+
+        <div class="policy-block" id="booking-terms">
+          <h3 class="policy-title">Booking Terms</h3>
+          <div class="policy-body">
+            <p>All bookings are processed after receiving the token amount. This amount is refundable in case Serene Vibes Kashmir is unable to confirm your booking on the requested date.</p>
+            <p>These itineraries give a general idea of our standard tour. Weather, road conditions, natural hazards, and the physical ability of participants may require changes before or during the trip. Serene Vibes Kashmir is not responsible for delays or expenses arising from natural calamities, flight cancellations, accidents, transport breakdowns, sickness, political closures, or other untoward incidents.</p>
+
+            <h4 class="policy-subtitle">Payment Schedule</h4>
+            <div class="policy-table-wrap">
+              <table class="policy-table">
+                <thead>
+                  <tr><th>Instalment</th><th>Amount</th><th>Due Date</th><th>Mode</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Token / Advance</td><td>30% of total cost</td><td>At time of booking</td><td>NEFT / UPI / Cheque</td></tr>
+                  <tr><td>Balance Payment</td><td>70% of total cost</td><td>7 days before departure</td><td>NEFT / UPI / Cheque</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="policy-note">Bank Transfer Details — Account Name: Serene Vibes Kashmir &nbsp;|&nbsp; Bank: J&amp;K Bank &nbsp;|&nbsp; UPI: serenevibeskashmir@upi. Full account number and IFSC are shared on your confirmed quotation.</p>
+
+            <h4 class="policy-subtitle">Child Policy</h4>
+            <p>Children up to age 5 are not charged. Children aged 6–10 are not charged for the package but meal charges apply. Children aged 11 and above are considered adults and charged accordingly.</p>
+
+            <h4 class="policy-subtitle">Documents Required</h4>
+            <p>A government-issued photo ID (Aadhaar / Passport / Voter ID) is mandatory for every guest at all checkpoints — copies are not accepted. Foreign nationals must carry a valid passport and Indian visa. Age proof is required for children aged 2–10 and infants under 2.</p>
+          </div>
+        </div>
+
+        <div class="policy-block" id="cancellation-policy">
+          <h3 class="policy-title">Cancellation Policy</h3>
+          <div class="policy-body">
+            <div class="policy-table-wrap">
+              <table class="policy-table">
+                <thead>
+                  <tr><th>Cancellation Timeline</th><th>Cancellation Charge</th><th>Refund %</th><th>Processing Time</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>30 days or more before departure</td><td>Nil (token forfeited)</td><td>70%</td><td>7–10 working days</td></tr>
+                  <tr><td>15–29 days before departure</td><td>25% of total tour cost</td><td>45%</td><td>7–10 working days</td></tr>
+                  <tr><td>7–14 days before departure</td><td>50% of total tour cost</td><td>20%</td><td>10–14 working days</td></tr>
+                  <tr><td>Less than 7 days / No-show</td><td>100% of total tour cost</td><td>Nil</td><td>Not applicable</td></tr>
+                  <tr><td>Natural calamity / force majeure</td><td>Credit note for future travel</td><td>—</td><td>As per T&amp;C</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Any alteration or cancellation after the holiday has commenced may incur additional penalties, and refunds do not apply to unused services.</p>
+          </div>
+        </div>
+
+        <div class="policy-block" id="privacy-policy">
+          <h3 class="policy-title">Privacy Policy</h3>
+          <div class="policy-body">
+            <p>Information you share with us — name, contact details, travel dates, and trip preferences — is used solely to prepare your itinerary, process your booking, and coordinate your stay with our hotel and transport partners. We do not sell or share your personal information with third parties beyond what is necessary to deliver your booked services.</p>
+            <p>Payment details are handled through your bank or UPI provider directly; Serene Vibes Kashmir does not store card or account credentials. For any privacy concerns, write to <a href="mailto:serenevibeskashmir@gmail.com">serenevibeskashmir@gmail.com</a>.</p>
+          </div>
+        </div>
+
+        <div class="policy-block" id="refund-guidelines">
+          <h3 class="policy-title">Refund Guidelines</h3>
+          <div class="policy-body">
+            <p>All refund claims must be raised within 7 days of booking completion by emailing <a href="mailto:serenevibeskashmir@gmail.com">serenevibeskashmir@gmail.com</a>. Requests raised after the trip has commenced will not be entertained.</p>
+            <p>Amounts already paid to third-party hotels or airlines are refunded only after recovery from the respective vendor, and refund timelines follow the cancellation table above. If a tour cannot be undertaken due to a pandemic or similar disruption, we provide either a refund or a credit note for future travel, subject to third-party vendor conditions. In case of billing errors, the agency reserves the right to re-invoice; dishonoured cheques attract a penalty of INR 500 per instance.</p>
+          </div>
+        </div>
+
+        <p class="policy-footnote">These terms apply to all bookings made through Serene Vibes Kashmir and are reissued in full with every client itinerary. For the complete terms &amp; conditions covering hotel policy, check-in/out, telecom, and jurisdiction, contact our team directly.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <svg class="logo-mark" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 24L12 12L18 18L28 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 26H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="logo-text"><span class="logo-name">Serene Vibes Kashmir</span><span class="logo-tagline">A Poem In Motion</span></span>
+        </a>
+        <p>Licensed Kashmir tour operator delivering professionally managed travel experiences across the valley.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul><li><a href="#destinations">Destinations</a></li><li><a href="#packages">Packages</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+      </div>
+      <div class="footer-links">
+        <h4>Policies</h4>
+        <ul><li><a href="#booking-terms">Booking Terms</a></li><li><a href="#cancellation-policy">Cancellation Policy</a></li><li><a href="#privacy-policy">Privacy Policy</a></li><li><a href="#refund-guidelines">Refund Guidelines</a></li></ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>NH-44, Lethpora<br>J&amp;K 192122</p>
+        <p><a href="tel:+9194190766510">+9194190766510</a></p>
+        <p><a href="mailto:serenevibeskashmir@gmail.com">serenevibeskashmir@gmail.com</a></p>
+        <p><a href="https://instagram.com/serenevibeskashmir" target="_blank" rel="noopener">@serenevibeskashmir</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom container"><p>&copy; 2026 Serene Vibes Kashmir. All rights reserved.</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
